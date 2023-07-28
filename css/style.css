@@ -1,0 +1,234 @@
+/* REGRAS CSS PARA O SITE DE EXEMPLOS
+o que você fizer aqui irá formartar TODAS as páginas HTML que estiverem conectadas com este arquivo */
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap');
+
+    /* Seletor UNIVERSAL alterando o box model para TODAS as tags do HTML */
+* {box-sizing: border-box;}
+
+body {
+    background-image: url(../imagens/tarde.jpg);
+    background-size: cover;    
+    background-attachment: fixed;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+    
+    /* # = identificador do div */
+#container {
+    background-color: #ffffff70;
+    width: 80%; 
+    margin: auto;
+
+    /* Limite maximo do container */
+    max-width: 1300px;
+
+    /* Limite minimo do container */
+    min-width: 620px;
+    
+    /* espaçamento */
+    padding: 20px;
+
+    /* arredondamento de bordas */
+    border-radius: 60px;
+
+    /* sombras - DistH DistV Blur */
+    box-shadow: #ffff00 2px 2px 15px, orange 0px 0px 20px
+
+}
+
+    
+img {
+    clip-path: circle(50% at 50% 50%);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+    border-radius: 20px;
+    
+    max-width: 100%;
+    /* Transformando as imagens em responsívas */
+}
+
+    
+h1 {
+    /* Obs = no caso de gradiente diagonal usa-se um valor numérico e a medida em graus (deg) */
+    background: rgba(255, 0, 0, 0.651);
+    background: linear-gradient(155deg, rgba(255, 0, 0, 0.842) 0%, rgba(255, 153, 0, 0.774) 35%, rgba(255, 242, 0, 0.623) 98%);
+
+    border-radius: 50px;
+    
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Tilt Prism';
+    color: #fff6f6;
+    padding: 10px;
+    text-shadow: black 1px 1px 5px;
+   
+}
+
+h2 {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    
+    background-image: url(../imagens/fundo02.gif);
+    background-size: cover;
+    padding: 5px;
+    
+   
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    font-family: 'Tilt Prism';
+    text-shadow: #f70000 1px 1px 5px;
+}
+
+h3 {
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    
+    background-image: url(../imagens/fundo01.jpg);
+    background-size: cover;
+    
+    text-align: center;
+    font-size: 35px;
+    text-shadow: #f700008c 1px 1px 3px;
+    font-family: 'Tilt Prism';
+
+}
+
+h4 {
+    border-right: 5px black dashed;
+
+    border-left-width: 5px;
+    border-left-color: black;
+    border-left-style: dashed;
+    
+    border-radius: 50px;
+    
+    background-image: url(../imagens/fundo01.jpg);
+    
+    text-align: center;
+    font-size: 30px;
+}
+
+/* Regras para o menu e seus links */
+    /* Seletor DESCENDENTE */
+
+nav a {
+    color: #a00909;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px;
+    background-color: #b8b2b269;
+    width: 30%;
+    display: inline-block;
+    border-radius: 80px;   
+    transition: 0.5s; 
+}
+
+/* Regra de acionamento do link seletor DESCENDENTE+PSEUDO-CLASSE
+    :hover -> mouse
+    :focus -> foco (teclado, dedo, etc) */
+nav a:hover, nav a:focus {
+    background-color: rgba(255, 0, 0, 0.205);
+    transform: translateY(-10px);
+}
+
+nav {
+    background-image: url(../imagens/fundo07.jpg);
+    background-size: cover;
+    
+    border-radius: 60px;
+
+    padding: 18px;
+    font-size: 22px;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+ol {
+    text-shadow: rgba(243, 15, 15, 0.705) 2px 2px 3px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+}
+
+ul {
+    text-align: left;
+    font-size: 30px;
+}
+ul li {color: #a00909;}
+/* :first-child -> Primeiro item */
+ul li:first-child {
+    color: darkblue;
+    background-color: #a00909;}
+/* :last-child -> Ultimo item */
+ul li:last-child {color: green;}
+/* :nth-child -> Por numero especifico */
+ul li:nth-child(2) {color: purple;}
+ul li:nth-child(6) {
+    color: lightblue; 
+    background-color: antiquewhite;
+}
+ul li:nth-child(3n) {background-color: cadetblue;}
+
+/* odd -> impar*/
+/* ul li:nth-child(odd) {background-color: #ffff00;} */
+/* even -> par */
+/* ul li:nth-child(even) {background-color: bisque;} */
+
+p {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 10px;
+    font-size: 26px;
+    text-align: center;
+}
+
+figure {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 419px;
+
+    /* Tornando referencia o elemento para o posicionamento */
+    position: relative;
+}
+
+figcaption {
+    width: 100%;
+    font-weight: bold;
+    background-color: #fdfdfd00;
+    text-shadow: #a00909 0px 0px 3px;
+    padding: 2px;
+    
+    
+   
+    /* Tornando o elemento livre para posicionamento */
+    position: absolute;
+    /* Coordenadas */
+    /* top: ; */
+    /* right: ; */
+    /* left: ; */
+    bottom: 30px;
+}
+figure img {
+    /* https://css-tricks.com/almanac/properties/f/filter/ */
+
+    filter: grayscale(100%) blur(2px);
+    transition: 2s;
+    cursor: pointer;
+}
+figure img:hover {
+    filter: none;
+    transform: scale(1.1);
+}
+
+.centralizar {
+    text-align: center;
+    margin: auto;
+}
+.sombra-texto {text-shadow: #ffffff 2px 2px 3px;}
+.borda-arredondada {border-radius: 8px;}
+.destaque {
+    background-color:rgba(237, 100, 100, 0.486);
+    padding: 1px 2px;
+    border: solid 2px rgba(255, 0, 0, 0.377);
+}
